@@ -15,8 +15,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
  */
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
+@import "../node_modules/material-colors/dist/colors.scss";
 
 button:focus {
   outline: none;
+}
+
+.card {
+  //box-shadow: 0 0 5px $md-grey-200;
+  border: 1px solid $md-grey-300;
+}
+
+.bg-app {
+  background: $md-grey-50;
+}
+
+.mat-paginator {
+  background: none;
+}
+
+.mat-toolbar {
+  /* background: $md-blue-grey-800;
+  color: #fff; */
 }

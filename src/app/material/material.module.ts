@@ -9,7 +9,8 @@ import {
     MatMenuModule,
     MatCardModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    MatPaginatorModule
   } from '@angular/material';
 
 @NgModule({
@@ -24,7 +25,8 @@ import {
     MatCardModule,
     MatInputModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatPaginatorModule
   ],
   exports: [
     MatButtonModule,
@@ -35,7 +37,8 @@ import {
     MatCardModule,
     MatInputModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatPaginatorModule
   ],
   declarations: []
 })

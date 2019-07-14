@@ -42,7 +42,8 @@ export class RegisterComponent implements OnInit {
     this.apiService.addUser$(this.user)
       .subscribe(res => {
         const id = res.id;
-        this.router.navigate(['/usuario', id]);
+        //this.router.navigate(['/usuario', id]);
+        this.router.navigate(['/usuarios']);
       },
       (err) => {console.log(err); });
   }

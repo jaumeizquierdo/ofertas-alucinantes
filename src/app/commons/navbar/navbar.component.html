@@ -1,11 +1,27 @@
 <mat-toolbar color="primary">
+
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
   <span>Ofertas Alucinantes!</span>
 
-  <button mat-button routerLink="/login">Login</button>
-  <button mat-button routerLink="/register">Register</button>
+  <div *ngIf="!isLogged">
+      <button mat-button routerLink="/login">Login</button>
+  </div>
+  <div *ngIf="!isLogged">
+      <button mat-button routerLink="/register">Register</button>
+  </div>
+  <div *ngIf="isLogged">
+      <button mat-button (click)="onLogout()">Logout</button>
+  </div>
+  <div *ngIf="isLogged">
+      <button mat-button routerLink="/nueva-oferta">Nueva oferta</button>
+  </div>
+
   <button mat-button routerLink="/usuarios">Usuarios</button>
-  <button mat-button routerLink="/usuario">Usuario</button>
   <button mat-button routerLink="/ofertas">Ofertas</button>
-  <button mat-button routerLink="/nueva-oferta">Nueva oferta</button>
 
 </mat-toolbar>

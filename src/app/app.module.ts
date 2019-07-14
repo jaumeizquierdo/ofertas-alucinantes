@@ -9,6 +9,7 @@ import { CommonsModule } from './commons/commons.module';
 import { UserModule } from './user/user.module';
 import { OffersModule } from './offers/offers.module';
 import { MaterialModule } from './material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MaterialModule } from './material/material.module';
     MaterialModule,
     CommonsModule,
     UserModule,
-    OffersModule
+    OffersModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

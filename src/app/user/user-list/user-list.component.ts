@@ -11,14 +11,23 @@ export class UserListComponent implements OnInit {
 
   users;
 
+  data: any;
+
   constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit() {
     this.getUsers();
   }
 
-  getUsers(){
+  getUsers() {
     this.apiService.getUsers$().subscribe(e => this.users = e);
+  }
+
+  deleteUser(id) {
+    this.apiService.deleteUser$(id).subscribe(data => {
+      this.data = data;
+      this.getUsers();
+    });
   }
 
 }
