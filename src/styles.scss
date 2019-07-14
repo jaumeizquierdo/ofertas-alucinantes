@@ -48,3 +48,18 @@ button:focus {
   color: $md-grey-500;
   transform: scale(0.8);
 }
+
+footer {
+  background: $md-blue-grey-800;
+  padding: 5em;
+  text-align: center;
+  color: #fff;
+  p {
+    font-size: 0.85em;
+  }
+}
+
+.btn-sign-up {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
