@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { Router } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
+import { Offer } from 'src/app/shared/classes/offer';
 
 @Component({
   selector: 'app-offer-list',
@@ -10,9 +11,15 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class OfferListComponent implements OnInit {
 
+  @HostBinding('attr.class') cssClass = 'row';
+
+  @Input() offer: Offer;
+
   offers;
+  //offer: Offer;
 
   data: any;
+  votos: number;
 
   lowValue: number = 0;
   highValue: number = 9;
@@ -33,6 +40,18 @@ export class OfferListComponent implements OnInit {
     return event;
   }
 
+/*   voteUp() {
+    console.log('up');
+    this.offer.voteUp();
+    return false;
+  }
+
+  voteDown() {
+    console.log('down');
+    this.offer.voteDown();
+    return false;
+  } */
+
   getOffers() {
     this.apiService.getOffers$().subscribe(e => this.offers = e);
   }
@@ -42,6 +61,11 @@ export class OfferListComponent implements OnInit {
       this.data = data;
       this.getOffers();
     });
+  }
+
+  test() {
+    console.log('probando');
+    return false;
   }
 
   ngOnInit() {

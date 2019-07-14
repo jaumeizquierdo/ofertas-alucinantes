@@ -22,7 +22,10 @@ export class OfferAddComponent implements OnInit {
     titulo: '',
     descripcion: '',
     imagen: '',
-    fecha: ''
+    fecha: '',
+    votos: 0,
+    voteUp() {},
+    voteDown() {}
   };
 
   constructor(private apiService: ApiService, private router: Router) {

@@ -12,8 +12,17 @@
   <div class="d-flex flex-wrap justify-content-center">
     <!--<div class="col-md-4 card-deck mb-4" *ngFor="let offer of offers.reverse() let i = index;">-->
 
+    <!-- let offer of (offers.reverse() | slice: lowValue : highValue) let i = index; -->
+
     <div class="col-md-4 card-deck mb-4" *ngFor="let offer of (offers.reverse() | slice: lowValue : highValue) let i = index;">
       <div class="card">
+        <div class="card-header">
+          <div class="d-flex align-items-center">
+            <a href (click)="voteDown()" class="p-0"><mat-icon class="mat-icon-mini">thumb_down_alt</mat-icon></a>
+            <small class="mx-2 text-danger p-0 my-0"><strong>{{ offer.votos }}</strong></small>
+            <a href (click)="voteUp()" class="p-0"><mat-icon class="mat-icon-mini">thumb_up_alt</mat-icon></a>
+          </div>
+        </div>
         <img class="card-img-top" src="{{offer.imagen}}" alt="{{offer.titulo}}}">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -21,10 +30,17 @@
           <a href="{{offer.url}}" class="btn btn-primary">Ir a la oferta</a>
         </div>
         <div class="card-footer">
-          <small class="text-muted">{{offer.fecha}}</small>
-          <button mat-icon-button>
-            <mat-icon color="warn" (click)="deleteOffer(offer.id)">delete</mat-icon>
-          </button>
+          <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">{{offer.fecha}}</small>
+              <div>
+                <button mat-icon-button>
+                  <mat-icon (click)="editOffer(offer.id)" class="mat-icon-mini">edit</mat-icon>
+                </button>
+                <button mat-icon-button>
+                  <mat-icon color="warn" class="mat-icon-mini" (click)="deleteOffer(offer.id)">delete</mat-icon>
+                </button>
+              </div>
+          </div>
         </div>
       </div>
     </div>

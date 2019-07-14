@@ -6,12 +6,14 @@ import { OfferAddComponent } from './offer-add/offer-add.component';
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { OfferCommentsComponent } from './offer-comments/offer-comments.component';
 
 @NgModule({
   declarations: [
     OfferComponent,
     OfferListComponent,
-    OfferAddComponent
+    OfferAddComponent,
+    OfferCommentsComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { FormsModule } from '@angular/forms';
   exports: [
     OfferComponent,
     OfferListComponent,
-    OfferAddComponent
+    OfferAddComponent,
+    OfferCommentsComponent
   ]
 })
 export class OffersModule { }

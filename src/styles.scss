@@ -24,6 +24,11 @@ button:focus {
 .card {
   //box-shadow: 0 0 5px $md-grey-200;
   border: 1px solid $md-grey-300;
+  .card-header {
+    a {
+      line-height: 1em
+    }
+  }
 }
 
 .bg-app {
@@ -37,4 +42,9 @@ button:focus {
 .mat-toolbar {
   /* background: $md-blue-grey-800;
   color: #fff; */
+}
+
+.mat-icon-mini {
+  color: $md-grey-500;
+  transform: scale(0.8);
 }
