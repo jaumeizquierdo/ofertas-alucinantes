@@ -40,7 +40,7 @@ export class OfferListComponent implements OnInit {
     return event;
   }
 
-/*   voteUp() {
+  voteUp() {
     console.log('up');
     this.offer.voteUp();
     return false;
@@ -50,7 +50,7 @@ export class OfferListComponent implements OnInit {
     console.log('down');
     this.offer.voteDown();
     return false;
-  } */
+  }
 
   getOffers() {
     this.apiService.getOffers$().subscribe(e => this.offers = e);

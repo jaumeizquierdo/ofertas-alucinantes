@@ -33,9 +33,9 @@ export class ApiService {
     return this.http.delete(`http://localhost:3000/offers/${id}`);
   }
 
-  editOffer$(offer: Offer) {
+  editOffer$(id: string, offer: Offer) {
     return this.http.put<Offer>('http://localhost:3000/offers', offer)
-      .pipe(tap((member: Offer) => console.log(`edited offer: id=${offer.id}`)),
+      .pipe(tap((offer: Offer) => console.log(`edited offer: id=${offer.id}`)),
             catchError(error => {console.log(error);
                                  return throwError(error); }));
   }

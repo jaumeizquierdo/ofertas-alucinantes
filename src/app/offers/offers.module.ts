@@ -7,13 +7,15 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { OfferCommentsComponent } from './offer-comments/offer-comments.component';
+import { OfferEditComponent } from './offer-edit/offer-edit.component';
 
 @NgModule({
   declarations: [
     OfferComponent,
     OfferListComponent,
     OfferAddComponent,
-    OfferCommentsComponent
+    OfferCommentsComponent,
+    OfferEditComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { OfferCommentsComponent } from './offer-comments/offer-comments.componen
     OfferComponent,
     OfferListComponent,
     OfferAddComponent,
-    OfferCommentsComponent
+    OfferCommentsComponent,
+    OfferEditComponent
   ]
 })
 export class OffersModule { }
