@@ -4,13 +4,16 @@ import { HttpHeaders } from '@angular/common/http';
 import { UserInterface } from '../interfaces/user-interface';
 import { map, tap, catchError } from 'rxjs/operators';
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
-
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class AuthService {
+
+  private apiURL = environment.API_URL;
+
   isLogged: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.getLogged());
 
   constructor(private http: HttpClient) {}
@@ -19,7 +22,7 @@ export class AuthService {
   });
 
   registerUser(name: string, email: string, password: string) {
-    const urlApi = 'http://localhost:3000/register';
+    const urlApi = this.apiURL + 'register';
     return this.http
       .post<UserInterface>(
         urlApi,
@@ -36,7 +39,7 @@ export class AuthService {
   }
 
   loginuser(email: string, password: string): Observable<any> {
-    const urlApi = 'http://localhost:3000/login';
+    const urlApi = this.apiURL + 'login';
     return this.http
       .post<UserInterface>(
         urlApi,
