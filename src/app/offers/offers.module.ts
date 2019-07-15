@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { OfferCommentsComponent } from './offer-comments/offer-comments.component';
 import { OfferEditComponent } from './offer-edit/offer-edit.component';
+import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { NgPipesModule } from 'ngx-pipes';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { OfferEditComponent } from './offer-edit/offer-edit.component';
     CommonModule,
     MaterialModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgPipesModule
   ],
   exports: [
     OfferComponent,

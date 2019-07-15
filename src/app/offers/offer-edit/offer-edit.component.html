@@ -1,4 +1,4 @@
-<!-- <div class="container">
+<div class="container">
     <div class="row">
       <div class="col-md-12">
           <div class="card my-5">
@@ -15,13 +15,13 @@
                         <a href="{{offerData.url}}" class="btn btn-primary">Ir a la oferta</a>
                       </div>
                       <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+                        <small class="text-muted">{{ offerData.fecha }}</small>
                       </div>
                     </div>
 
                   </div>
                   <div class="col-md-8">
-                    <form [formGroup]="offerForm" (ngSubmit)="onFormSubmit(productForm.value)">
+                    <form>
                       <div class="form-group">
                         <label for="url">Enlace a la oferta</label>
                         <input type="text" class="form-control" id="url" [(ngModel)]='offerData.url' name="url" placeholder="http://www.amazon.es/...">
@@ -46,7 +46,7 @@
                         <label>Precio habitual</label>
                         <input type="text" class="form-control" [(ngModel)]='offerData.precio_habitual' name="precio_habitual" placeholder="Precio habitual">
                       </div>
-                      <button type="submit" class="btn btn-primary" (click)="editOffer()">Enviar nueva oferta</button>
+                      <button type="submit" class="btn btn-primary">Enviar nueva oferta</button>
                     </form>
                   </div>
                 </div>
@@ -55,4 +55,4 @@
       </div>
     </div>
   </div>
- -->
+

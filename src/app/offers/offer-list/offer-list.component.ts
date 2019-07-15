@@ -11,9 +11,7 @@ import { Offer } from 'src/app/shared/classes/offer';
 })
 export class OfferListComponent implements OnInit {
 
-  @HostBinding('attr.class') cssClass = 'row';
-
-  @Input() offer: Offer;
+  offer: Offer;
 
   offers;
   //offer: Offer;
@@ -61,11 +59,6 @@ export class OfferListComponent implements OnInit {
       this.data = data;
       this.getOffers();
     });
-  }
-
-  test() {
-    console.log('probando');
-    return false;
   }
 
   ngOnInit() {

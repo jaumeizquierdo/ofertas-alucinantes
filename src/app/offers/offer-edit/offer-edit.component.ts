@@ -15,6 +15,7 @@ export class OfferEditComponent implements OnInit {
   offerForm: FormGroup;
 
   public offer: Offer;
+  public identifier: any;
 
   isLoadingResults = false;
 
@@ -47,6 +48,8 @@ export class OfferEditComponent implements OnInit {
                           return unique; }
 
   ngOnInit() {
+    this.route.params.subscribe(miParams => {this.identifier = miParams.id; });
+    this.apiService.getOffer$(this.identifier).subscribe(e => this.offer = e);
   }
 
   getOffer(id) {

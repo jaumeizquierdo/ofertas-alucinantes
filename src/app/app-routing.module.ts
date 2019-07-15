@@ -12,11 +12,12 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserComponent } from './user/user/user.component';
 
 import { AuthGuard } from './shared/guards/auth.guard';
+import { OfferEditComponent } from './offers/offer-edit/offer-edit.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home', pathMatch: 'full'
+    redirectTo: 'ofertas', pathMatch: 'full'
   },
   {
     path: 'home',
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'oferta/:id',
     component: OfferComponent
+  },
+  {
+    path: 'editar-oferta/:id',
+    component: OfferEditComponent
   },
   {
     path: 'nueva-oferta',
