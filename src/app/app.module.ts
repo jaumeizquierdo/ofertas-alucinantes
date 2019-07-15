@@ -10,6 +10,7 @@ import { UserModule } from './user/user.module';
 import { OffersModule } from './offers/offers.module';
 import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonsModule,
     UserModule,
     OffersModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

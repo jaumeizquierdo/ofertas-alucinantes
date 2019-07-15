@@ -1,3 +1,5 @@
+@import "../../../../node_modules/material-colors/dist/colors.scss";
+
 ul {
   margin: 0;
   padding: 0;
@@ -5,5 +7,17 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+}
+
+.navbar-dark,
+.bg-dark {
+  background: $md-blue-700 !important;
+  border-bottom: 2px solid $md-blue-800;
+}
+
+.btn-outline-light {
+  &:hover {
+    color: $md-blue-700;
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Offer } from 'src/app/shared/classes/offer';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import * as moment from 'moment';
 
 @Component({
@@ -12,14 +12,10 @@ import * as moment from 'moment';
 })
 export class OfferEditComponent implements OnInit {
 
-  offerForm: FormGroup;
-
   public offer: Offer;
   public identifier: any;
 
   isLoadingResults = false;
-
-  _id: string;
 
   public offerData: Offer = {
     id: this.uniqueID(),
@@ -49,37 +45,20 @@ export class OfferEditComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(miParams => {this.identifier = miParams.id; });
-    this.apiService.getOffer$(this.identifier).subscribe(e => this.offer = e);
+    this.apiService.getOffer$(this.identifier).subscribe(e => {
+      this.offerData = e;
+      console.log(e);
+    });
   }
 
-  getOffer(id) {
-    this.apiService.getOffer$(id)
+  editOffer() {
+    this.offer = Object.assign({}, this.offerData);
+    this.apiService.editOffer$(this.offerData.id, this.offer)
       .subscribe(res => {
         const id = res.id;
-        this.offerForm.setValue({
-          url: this.offerData.url,
-          titulo: this.offerData.url,
-          descripcion: this.offerData.descripcion,
-          imagen: this.offerData.imagen,
-          precio_actual: this.offerData.precio_actual,
-          precio_habitual: this.offerData.precio_habitual
-        });
+        this.router.navigate(['/oferta', id]);
       },
       (err) => {console.log(err); });
   }
-
-  /* onFormSubmit(form:NgForm) {
-    this.isLoadingResults = true;
-    this.apiService.editOffer$(this.id, form)
-      .subscribe(res => {
-          const id = res.id;
-          this.isLoadingResults = false;
-          this.router.navigate(['/product-details', id]);
-        }, (err) => {
-          console.log(err);
-          this.isLoadingResults = false;
-        }
-      );
-  } */
 
 }

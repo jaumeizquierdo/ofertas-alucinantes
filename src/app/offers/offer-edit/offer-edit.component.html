@@ -46,7 +46,7 @@
                         <label>Precio habitual</label>
                         <input type="text" class="form-control" [(ngModel)]='offerData.precio_habitual' name="precio_habitual" placeholder="Precio habitual">
                       </div>
-                      <button type="submit" class="btn btn-primary">Enviar nueva oferta</button>
+                      <button type="submit" (click)="editOffer()" class="btn btn-primary">Actualizar oferta</button>
                     </form>
                   </div>
                 </div>

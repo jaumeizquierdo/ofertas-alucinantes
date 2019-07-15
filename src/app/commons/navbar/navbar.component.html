@@ -1,45 +1,28 @@
-<mat-toolbar color="primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Ofertas Alucinantes!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="container-fluid">
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <div class="d-flex align-items-center justify-content-between">
-
-          <div class="d-flex align-items-center">
-            <button mat-icon-button (click)="onToggleSidenav()">
-              <mat-icon>menu</mat-icon>
-            </button>
-            <span class="m-0 p-0">Ofertas Alucinantes!</span>
-          </div>
-
-          <ul class="d-flex">
-            <li *ngIf="!isLogged">
-                <button mat-button routerLink="/login">Login</button>
-            </li>
-            <li *ngIf="isLogged">
-                <button mat-button routerLink="/nueva-oferta">Nueva oferta</button>
-            </li>
-            <li>
-                <button mat-button routerLink="/usuarios">Usuarios</button>
-            </li>
-            <li>
-                <button mat-button routerLink="/ofertas">Ofertas</button>
-            </li>
-            <li *ngIf="isLogged">
-                <button mat-button (click)="onLogout()">Logout</button>
-            </li>
-            <li *ngIf="!isLogged">
-                <button mat-stroked-button color="primary" class="btn-sign-up" routerLink="/register">Sign Up</button>
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" *ngIf="!isLogged">
+          <a class="nav-link" routerLink="/login">Inicia sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuarios">Usuarios</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/ofertas">Ofertas</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a *ngIf="!isLogged" routerLink="/register" class="btn btn-outline-light my-2 my-sm-0 mr-2">Registrarse</a>
+        <a *ngIf="!isLogged" routerLink="/login" class="btn btn-outline-light my-2 my-sm-0 mr-2">Inicia sesión</a>
+        <a *ngIf="isLogged" routerLink="/nueva-oferta" class="btn btn-outline-light my-2 my-sm-0 mr-2">Enviar oferta</a>
+        <button *ngIf="isLogged" (click)="onLogout()" class="btn btn-outline-light my-2 my-sm-0">Cerrar sesión</button>
+      </form>
     </div>
-
-  </div>
-
-</mat-toolbar>

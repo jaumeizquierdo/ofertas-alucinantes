@@ -8,7 +8,7 @@
                   <p>Vista previa del chollo</p>
 
                   <div class="card">
-                    <img class="card-img-top" src="{{ offerData.imagen }}" />
+                    <img *ngIf="offerData.imagen !== '' " class="card-img-top" src="{{ offerData.imagen }}" />
                     <div class="card-body">
                       <h5 class="card-title">{{ offerData.titulo }}</h5>
                       <p class="card-text">{{ offerData.descripcion }}</p>

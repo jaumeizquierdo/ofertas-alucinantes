@@ -37,7 +37,7 @@ export class ApiService {
   }
 
   editOffer$(id: string, offer: Offer) {
-    return this.http.put<Offer>(this.apiURL + 'offers', offer)
+    return this.http.put<Offer>(this.apiURL + `offers/${id}`, offer)
       .pipe(tap((offer: Offer) => console.log(`edited offer: id=${offer.id}`)),
             catchError(error => {console.log(error);
                                  return throwError(error); }));
@@ -64,8 +64,8 @@ export class ApiService {
     return this.http.delete(this.apiURL + `users/${id}`);
   }
 
-  editUser$(user: User) {
-    return this.http.put<User>(this.apiURL + 'users', user)
+  editUser$(id: string, user: User) {
+    return this.http.put<User>(this.apiURL + `users/${id}`, user)
       .pipe(tap((member: User) => console.log(`edited member: id=${member.id}`)),
             catchError(error => {console.log(error);
                                  return throwError(error); }));

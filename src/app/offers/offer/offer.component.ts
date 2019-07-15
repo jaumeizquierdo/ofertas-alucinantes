@@ -13,7 +13,8 @@ export class OfferComponent implements OnInit {
   public offer: Offer;
   public identifier: any;
 
-  constructor(private apiService: ApiService, private route: ActivatedRoute) { }
+  constructor(private apiService: ApiService, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.route.params.subscribe(miParams => {this.identifier = miParams.id; });

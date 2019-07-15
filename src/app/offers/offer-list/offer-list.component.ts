@@ -23,7 +23,7 @@ export class OfferListComponent implements OnInit {
   highValue: number = 9;
 
   // MatPaginator Inputs
-  length = 100;
+  longitudRegistros = 0;
   pageSize = 9;
   pageSizeOptions: number[] = [5, 10, 25, 100];
 
@@ -51,7 +51,10 @@ export class OfferListComponent implements OnInit {
   }
 
   getOffers() {
-    this.apiService.getOffers$().subscribe(e => this.offers = e);
+    this.apiService.getOffers$().subscribe(e => {
+      this.offers = e;
+      this.longitudRegistros = this.offers.length;
+    });
   }
 
   deleteOffer(id) {
