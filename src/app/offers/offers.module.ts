@@ -10,6 +10,7 @@ import { OfferCommentsComponent } from './offer-comments/offer-comments.componen
 import { OfferEditComponent } from './offer-edit/offer-edit.component';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { NgPipesModule } from 'ngx-pipes';
+import { TruncateModule } from 'ng2-truncate';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NgPipesModule } from 'ngx-pipes';
     MaterialModule,
     RouterModule,
     FormsModule,
-    NgPipesModule
+    NgPipesModule,
+    TruncateModule
   ],
   exports: [
     OfferComponent,

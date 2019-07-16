@@ -13,7 +13,11 @@
     background: $md-grey-100;
   }
   .card-img-wrapper {
-    min-height: 300px;
+    min-height: 320px;
+    .card-img-top {
+      max-height: 100%;
+      max-width: 100%;
+    }
   }
   .card-footer {
     padding: 0.5rem 1rem;
