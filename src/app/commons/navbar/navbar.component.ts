@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
   public onLogout(): void {
     this.authService.logoutUser();
     this.isLogged = false;
-    this.router.navigate(['/home']);
+    this.router.navigate(['/ofertas']);
   }
 
   public onCheckUser(): void {
