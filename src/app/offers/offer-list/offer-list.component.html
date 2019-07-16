@@ -26,6 +26,8 @@
         </div>
         <img class="card-img-top" src="{{offer.imagen}}" alt="{{offer.titulo}}}">
         <div class="card-body">
+          <h4 class="text-danger margin: 1em;">{{offer.precio_actual}}€</h4>
+          <small>Precio recomendado: <del>{{offer.precio_habitual}}</del>€</small>
           <p class="card-text"><a [routerLink]="['/oferta',offer.id]" routerLinkActive="router-link-active">{{offer.titulo}}</a></p>
           <a href="{{offer.url}}" class="btn btn-primary">Ir a la oferta</a>
         </div>

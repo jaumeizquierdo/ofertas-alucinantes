@@ -12,7 +12,8 @@
                 <div class="card-title"><h2>{{offer.titulo}}</h2></div>
                 <div class="card-text mb-4">
                   <p>{{offer.descripcion}}</p>
-                  <h4>{{offer.precio_actual}}€</h4>
+                  <h4 class="text-danger">{{offer.precio_actual}}€</h4>
+                  <h5>Precio recomendado: <del>{{offer.precio_habitual}}</del>€</h5>
                 </div>
                 <a href="{{offer.url}}" class="btn btn-primary" target="_blank">Ir a la oferta</a>
               </div>
