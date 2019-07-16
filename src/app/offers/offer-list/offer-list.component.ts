@@ -3,6 +3,7 @@ import { ApiService } from 'src/app/shared/services/api.service';
 import { Router } from '@angular/router';
 import { PageEvent } from '@angular/material/paginator';
 import { Offer } from 'src/app/shared/classes/offer';
+import { promise } from 'protractor';
 
 @Component({
   selector: 'app-offer-list',
@@ -39,17 +40,40 @@ export class OfferListComponent implements OnInit {
   }
 
   voteUp(id) {
-    let x: Offer = this.offers.find(elem => { return elem.id === id });
+
+    /* let x: Offer = this.offers.find(elem => { return elem.id === id });
     if (isNaN(x.votos)) x.votos=0;
     x.votos += 1;
-    this.apiService.editOffer$(id, x).subscribe();
+    this.apiService.editOffer$(id, x).subscribe(); */
+
+
+/*  this.apiService.getOffer$(id).toPromise().then( x => {
+      if (isNaN(x.votos)) x.votos=0;
+      x.votos += 1;
+      return x;
+    }).then( p => {
+      this.apiService.editOffer$(id, p).subscribe();
+    });
+ */
+
+    this.apiService.getOffer$(id).subscribe(x => {
+      let e: Offer = this.offers.find(elem => { return elem.id === id });
+      if (isNaN(x.votos)) x.votos=0;
+      x.votos += 1;
+      e.votos = x.votos;
+      this.apiService.editOffer$(id, x).subscribe();
+    });
+
   }
 
   voteDown(id) {
-    let x: Offer = this.offers.find(elem => { return elem.id === id });
-    if (isNaN(x.votos)) x.votos=0;
-    if (x.votos>0) x.votos -= 1;
-    this.apiService.editOffer$(id, x).subscribe();
+    this.apiService.getOffer$(id).subscribe(x => {
+      let e: Offer = this.offers.find(elem => { return elem.id === id });
+      if (isNaN(x.votos)) x.votos=0;
+      if (x.votos>0) x.votos -= 1;
+      e.votos = x.votos;
+      this.apiService.editOffer$(id, x).subscribe();
+      });
   }
 
   getOffers() {

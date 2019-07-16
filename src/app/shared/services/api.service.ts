@@ -46,7 +46,7 @@ export class ApiService {
   // Users
 
   getUsers$() {
-    return this.http.get(this.apiURL + 'users');
+    return this.http.get<User[]>(this.apiURL + 'users');
   }
 
   getUser$(id: string) {
