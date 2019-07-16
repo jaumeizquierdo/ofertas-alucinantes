@@ -47,18 +47,18 @@ export class OfferListComponent implements OnInit {
     this.apiService.editOffer$(id, x).subscribe(); */
 
 
-/*  this.apiService.getOffer$(id).toPromise().then( x => {
-      if (isNaN(x.votos)) x.votos=0;
-      x.votos += 1;
-      return x;
-    }).then( p => {
-      this.apiService.editOffer$(id, p).subscribe();
-    });
- */
+    /*  this.apiService.getOffer$(id).toPromise().then( x => {
+          if (isNaN(x.votos)) x.votos=0;
+          x.votos += 1;
+          return x;
+        }).then( p => {
+          this.apiService.editOffer$(id, p).subscribe();
+        });
+    */
 
     this.apiService.getOffer$(id).subscribe(x => {
-      let e: Offer = this.offers.find(elem => { return elem.id === id });
-      if (isNaN(x.votos)) x.votos=0;
+      let e: Offer = this.offers.find(elem => elem.id === id);
+      if (isNaN(x.votos)) { x.votos = 0; }
       x.votos += 1;
       e.votos = x.votos;
       this.apiService.editOffer$(id, x).subscribe();
@@ -68,9 +68,9 @@ export class OfferListComponent implements OnInit {
 
   voteDown(id) {
     this.apiService.getOffer$(id).subscribe(x => {
-      let e: Offer = this.offers.find(elem => { return elem.id === id });
-      if (isNaN(x.votos)) x.votos=0;
-      if (x.votos>0) x.votos -= 1;
+      let e: Offer = this.offers.find(elem => elem.id === id);
+      if (isNaN(x.votos)) { x.votos = 0; }
+      if (x.votos > 0) { x.votos -= 1; }
       e.votos = x.votos;
       this.apiService.editOffer$(id, x).subscribe();
       });

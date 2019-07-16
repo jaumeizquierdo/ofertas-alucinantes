@@ -1,3 +1,5 @@
+@import "../../../../node_modules/material-colors/dist/colors.scss";
+
 .card {
   transition: transform .2s;
   &:hover {
@@ -6,5 +8,42 @@
   }
   h4 {
     font-size: 1.3em;
+  }
+  .card-header {
+    background: $md-grey-100;
+  }
+  .card-img-wrapper {
+    min-height: 300px;
+  }
+  .card-footer {
+    padding: 0.5rem 1rem;
+  }
+  .vote-wrapper {
+    width: 100px;
+    border: 1px solid $md-grey-300;
+    border-radius: 3px;
+    background: #fff;
+  }
+}
+
+.btn-vote {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 2px;
+}
+
+.btn-vote-down {
+  .mat-icon {
+    &:hover {
+      color: $md-pink-a400;
+    }
+  }
+}
+
+.btn-vote-up {
+  .mat-icon {
+    &:hover {
+      color: $md-green-500;
+    }
   }
 }
