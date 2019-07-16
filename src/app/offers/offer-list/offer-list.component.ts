@@ -11,9 +11,9 @@ import { Offer } from 'src/app/shared/classes/offer';
 })
 export class OfferListComponent implements OnInit {
 
-  offer: Offer;
+  //offer: Offer;
 
-  offers;
+  offers: Offer[];
   //offer: Offer;
 
   data: any;
@@ -38,16 +38,18 @@ export class OfferListComponent implements OnInit {
     return event;
   }
 
-  voteUp() {
-    console.log('up');
-    this.offer.voteUp();
-    return false;
+  voteUp(id) {
+    let x: Offer = this.offers.find(elem => { return elem.id === id });
+    if (x.votos === null) x.votos=0;
+    x.votos += 1;
+    this.apiService.editOffer$(id, x).subscribe();
   }
 
-  voteDown() {
-    console.log('down');
-    this.offer.voteDown();
-    return false;
+  voteDown(id) {
+    let x: Offer = this.offers.find(elem => { return elem.id === id });
+    if (x.votos === null) x.votos=0;
+    if (x.votos>0) x.votos -= 1;
+    this.apiService.editOffer$(id, x).subscribe();
   }
 
   getOffers() {

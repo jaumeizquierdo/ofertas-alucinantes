@@ -18,7 +18,7 @@ export class ApiService {
   // Offers
 
   getOffers$() {
-    return this.http.get(this.apiURL + 'offers');
+    return this.http.get<Offer[]>(this.apiURL + 'offers');
   }
 
   getOffer$(id: string) {

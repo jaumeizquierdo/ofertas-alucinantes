@@ -19,9 +19,9 @@
       <div class="card">
         <div class="card-header">
           <div class="d-flex align-items-center">
-            <a href (click)="voteDown()" class="p-0"><mat-icon class="mat-icon-mini">thumb_down_alt</mat-icon></a>
+            <button (click)="voteDown(offer.id)" class="p-0"><mat-icon class="mat-icon-mini">thumb_down_alt</mat-icon></button>
             <small class="mx-2 text-danger p-0 my-0"><strong>{{ offer.votos }}</strong></small>
-            <a href (click)="voteUp()" class="p-0"><mat-icon class="mat-icon-mini">thumb_up_alt</mat-icon></a>
+            <button (click)="voteUp(offer.id)" class="p-0"><mat-icon class="mat-icon-mini">thumb_up_alt</mat-icon></button>
           </div>
         </div>
         <img class="card-img-top" src="{{offer.imagen}}" alt="{{offer.titulo}}}">
