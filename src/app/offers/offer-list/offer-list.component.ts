@@ -40,14 +40,14 @@ export class OfferListComponent implements OnInit {
 
   voteUp(id) {
     let x: Offer = this.offers.find(elem => { return elem.id === id });
-    if (x.votos === null) x.votos=0;
+    if (isNaN(x.votos)) x.votos=0;
     x.votos += 1;
     this.apiService.editOffer$(id, x).subscribe();
   }
 
   voteDown(id) {
     let x: Offer = this.offers.find(elem => { return elem.id === id });
-    if (x.votos === null) x.votos=0;
+    if (isNaN(x.votos)) x.votos=0;
     if (x.votos>0) x.votos -= 1;
     this.apiService.editOffer$(id, x).subscribe();
   }
