@@ -1,12 +1,12 @@
 # Ofertas Alucinantes!
 
-Ofertas Alucinantes es un proyecto realizado en Angular 8, el cual nos permite poder enviar ofertas interesantes que irán clasificandose según los votos que proporcionen los usuarios. En un futuro la app tendrá una división mediante tabs, que irá filtrando las ofertas del siguiente modo:
+Ofertas Alucinantes es un proyecto realizado en Angular 8.0.4 (https://github.com/angular/angular-cli), el cual nos permite poder enviar ofertas interesantes que irán clasificandose según los votos que proporcionen los usuarios.
 
-<ul>
-  <li>Ofertas nuevas -> Ofertas recién enviadas</li>
-  <li>Ofertas populares -> Más de 50 votos</li>
-  <li>Ofertas destacadas -> Más de 100 votos</li>
-</ul>
+El proyecto se encuentra en la siguiente dirección: https://github.com/jaumeizquierdo/ofertas-alucinantes
+
+Para ver una **demo funcional** puede verse en: https://jaumeizquierdo.github.io/ofertas-alucinantes/ o en https://jaumeizquierdo.com/angular/
+
+La API que gestiona la información de ejemplo está disponible en https://ofertas-rest.herokuapp.com/
 
 En el estado actual la app tiene los siguientes módulos:
 
@@ -15,85 +15,102 @@ En el estado actual la app tiene los siguientes módulos:
 En el módulo user tenemos un CRUD en el cual podemos crear un nuevo usuario, listarlos y ver el detalle del mismo.
 Los componentes utilizados son:
 
-<ul>
-  <li>**LOGIN**: formulario de login</li>
-  <li>**REGISTER**: formulario de registro</li>
-  <li>**USER LIST**: vista del listado de usuarios. Desde el card de cada una de las ofertas podemos emitir un voto positivo o negativo. También podemos editarla o eliminarla.</li>
-  <li>**USER**: vista del detalle de usuario</li>
-</ul>
+- **LOGIN**: formulario de login
+- **REGISTER**: formulario de registro
+- **USER LIST**: vista del listado de usuarios. Desde el card de cada una de las ofertas podemos emitir un voto positivo o negativo. También podemos editarla o eliminarla.
+- **USER**: vista del detalle de usuario
 
 ## Módulo Ofertas
 
 El módulo de ofertas tenemos otro CRUD que nos permite visualizar las ofertas enviadas por los usuarios.
 
-<ul>
-  <li>**OFFER**: vista principal de la app con el listado de ofertas. Tiene un paginado de 9 elementos por página.</li>
-  <li>**OFFER ADD**: formulario de envío de oferta. En la vista se puede obtener una vista previa de la oferta que estamos generando.</li>
-  <li>**OFFER EDIT**: formulario de edición de la oferta.</li>
-</ul>
+- **OFFER**: vista principal de la app con el listado de ofertas. Tiene un paginado de 9 elementos por página.
+- **OFFER ADD**: formulario de envío de oferta. En la vista se puede obtener una vista previa de la oferta que estamos generando.
+- **OFFER EDIT**: formulario de edición de la oferta.
 
-## Mejoras introducidas
+## Módulo Commons
 
-<ul>
-  <li>**Angular Material** (https://material.angular.io/)</li>
-  <li>**Material Icons** (https://material.angular.io/)</li>
-  <li>**Jquery** (https://www.npmjs.com/package/jquery)</li>
-  <li>**Paginado de ofertas** (https://material.angular.io/components/paginator/overview)</li>
-  <li>**NGX Spinner** (https://napster2210.github.io/ngx-spinner/)</li>
-  <li>**Material colors** (https://www.npmjs.com/package/material-colors)</li>
-  <li>**Moment.js** (https://www.npmjs.com/package/moment)</li>
-  <li>**ng2-truncate** (https://www.npmjs.com/package/ng2-truncate)</li>
-  <li>**ngx-pipes** (https://www.npmjs.com/package/ngx-pipes)</li>
-</ul>
+- **HOME**: Redirige a Ofertas
+- **NAVBAR**: Barra de navegación
+- **FOOTER**: Pie de la web
+- **NOTFOUND**: 404 error
 
-## Wireframes
+## SHARED
 
-<img src="https://angular.io/assets/images/logos/angular/angular.svg" data-canonical-src="https://angular.io/assets/images/logos/angular/angular.svg" width="200" height="200" />
+En la carpeta 'shared' encontramos los servicios utilizados, las clases y el auth-guard
 
-## Wireframes
+- **CLASES**: Se han utilizado dos clases: Offer y User
+- **GUARDS**: Bloquea el acceso a 'nueva-oferta' si no hemos hecho login
+- **SERVICIOS**: Api.Service gestiona el CRUD de 'Ofertas' y Auth.Service el de 'Usuarios'
+
+ ## API
+
+ La API utilizada en la versión de producción puede encontrarse en https://ofertas-rest.herokuapp.com/
+
+## DEPENDENCIAS UTILIZADAS
+
+- **Angular Material** (https://material.angular.io/)
+- **Material Icons** (https://material.angular.io/)
+- **Jquery** (https://www.npmjs.com/package/jquery)
+- **Paginado de ofertas** (https://material.angular.io/components/paginator/overview)
+- **NGX Spinner** (https://napster2210.github.io/ngx-spinner/)
+- **Material colors** (https://www.npmjs.com/package/material-colors)
+- **Moment.js** (https://www.npmjs.com/package/moment)
+- **ng2-truncate** (https://www.npmjs.com/package/ng2-truncate)
+- **ngx-pipes** (https://www.npmjs.com/package/ngx-pipes)
+
+## WIREFRAMES
 
 ### Módulo ofertas
 
-Componente lista de ofertas:
+- Componente lista de ofertas:
 
 <img src="https://i.imgur.com/BLuPXAI.png" data-canonical-src="https://i.imgur.com/BLuPXAI.png" />
 
-Componente vista de la oferta:
+- Componente vista de la oferta:
 
 <img src="https://i.imgur.com/WKB4jDi.png" data-canonical-src="https://i.imgur.com/WKB4jDi.png" />
 
-Componente edición de la oferta:
+- Componente edición de la oferta:
 
 <img src="https://i.imgur.com/60chHnO.png" data-canonical-src="https://i.imgur.com/60chHnO.png" />
 
-Versión mobile:
+- Versión mobile:
 
 <img src="https://i.imgur.com/UuTBd9m.png" data-canonical-src="https://i.imgur.com/UuTBd9m.png" />
 
+## SPRINT
 
+El flujo de trabajo ha sido dividido en diferentes 'users histories gestionadas' mediante Trello. Adjuntamos captura del sprint con algunas tareas realizadas y otras pendientes:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
+<img src="https://i.imgur.com/UIIyIiF.png" data-canonical-src="https://i.imgur.com/UIIyIiF.png" />
 
-## Development server
+<img src="https://i.imgur.com/aDEtWP7.png" data-canonical-src="https://i.imgur.com/aDEtWP7.png" />
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## COMMITS
 
-## Code scaffolding
+Adjuntamos dos capturas con el número de commits realizados y agunos de los commits enviados:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<img src="https://i.imgur.com/4Mwf4NK.png" data-canonical-src="https://i.imgur.com/4Mwf4NK.png" />
+<img src="https://i.imgur.com/1VvDT5v.png" data-canonical-src="https://i.imgur.com/1VvDT5v.png" />
 
-## Build
+## RETO A SUPERAR
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+---
 
-## Running unit tests
+<img src="https://i.imgur.com/2tepsUY.png" data-canonical-src="https://i.imgur.com/2tepsUY.png" />
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## FUTURIBLES
 
-## Running end-to-end tests
+En un futuro la app tendrá una división mediante tabs, que irá filtrando las ofertas del siguiente modo:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- **Ofertas nuevas** -> Ofertas recién enviadas
+- **Ofertas populares** -> Más de 50 votos
+- **Ofertas destacadas** -> Más de 100 votos
 
-## Further help
+Otras mejoras a realizar son:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Solo podrá tener un voto por usuario
+- La app tendrá que recibir notificaciones en tiempo real para mostrar el número de votos
+- Sistema de comentarios en las ofertas para usuarios registrados
+- Sistema de referidos en los enlaces. Tendría que modificarse la url introducida por el usuario para añadir los enlaces de referidos de diferentes plataformas
