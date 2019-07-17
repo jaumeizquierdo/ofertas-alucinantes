@@ -22,11 +22,26 @@
   .card-footer {
     padding: 0.5rem 1rem;
   }
+
   .vote-wrapper {
     width: 100px;
     border: 1px solid $md-grey-300;
     border-radius: 3px;
     background: #fff;
+  }
+
+  .card-body {
+    position: relative;
+  }
+
+  .card-body-wrapper {
+    min-height: 185px;
+  }
+
+  .card-body-bottom {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
   }
 }
 
