@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
 
-Prueba
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" data-canonical-src="https://angular.io/assets/images/logos/angular/angular.svg" width="200" height="200" />
 
 ## Development server
 
