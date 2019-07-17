@@ -9,21 +9,10 @@ Powered by:
 
 ### Módulo ofertas
 
-Componente lista de ofertas:
-
-<img src="https://imgur.com/BLuPXAI" data-canonical-src="https://imgur.com/BLuPXAI" />
-
-Componente vista de la oferta:
-
-<img src="https://imgur.com/WKB4jDi" data-canonical-src="https://imgur.com/WKB4jDi" />
-
-Componente edición de la oferta:
-
-<img src="https://imgur.com/60chHnO" data-canonical-src="https://imgur.com/60chHnO" />
-
-Versión mobile:
-
-<img src="https://imgur.com/UuTBd9m" data-canonical-src="https://imgur.com/UuTBd9m" />
+[![Componente lista de ofertas:](https://imgur.com/BLuPXAI)](https://imgur.com/BLuPXAI)
+[![Componente vista de la oferta:](https://imgur.com/WKB4jDi)](https://imgur.com/WKB4jDi)
+[![Componente edición de la oferta:](https://imgur.com/60chHnO)](https://imgur.com/60chHnO)
+[![Versión mobile:](https://imgur.com/UuTBd9m)](https://imgur.com/UuTBd9m)
 
 ## Development server
 
