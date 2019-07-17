@@ -34,16 +34,17 @@ El módulo de ofertas tenemos otro CRUD que nos permite visualizar las ofertas e
 
 ## Mejoras introducidas
 
-- **Angular Material** (https://material.angular.io/)
-- **Bootstrap 4** (https://getbootstrap.com/docs/4.0/getting-started/introduction/)
-- **Material Icons** (https://material.angular.io/)
-- **Jquery** (https://www.npmjs.com/package/jquery)
-- **Paginado de ofertas** (https://material.angular.io/components/paginator/overview)
-- **NGX Spinner** (https://napster2210.github.io/ngx-spinner/)
-- **Material colors** (https://www.npmjs.com/package/material-colors)
-- **Moment.js** (https://www.npmjs.com/package/moment)
-- **ng2-truncate** (https://www.npmjs.com/package/ng2-truncate)
-- **ngx-pipes** (https://www.npmjs.com/package/ngx-pipes)
+<ul>
+  <li>**Angular Material** (https://material.angular.io/)</li>
+  <li>**Material Icons** (https://material.angular.io/)</li>
+  <li>**Jquery** (https://www.npmjs.com/package/jquery)</li>
+  <li>**Paginado de ofertas** (https://material.angular.io/components/paginator/overview)</li>
+  <li>**NGX Spinner** (https://napster2210.github.io/ngx-spinner/)</li>
+  <li>**Material colors** (https://www.npmjs.com/package/material-colors)</li>
+  <li>**Moment.js** (https://www.npmjs.com/package/moment)</li>
+  <li>**ng2-truncate** (https://www.npmjs.com/package/ng2-truncate)</li>
+  <li>**ngx-pipes** (https://www.npmjs.com/package/ngx-pipes)</li>
+</ul>
 
 ## Wireframes
 
