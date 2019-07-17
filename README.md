@@ -1,8 +1,29 @@
-# OfertasAlucinantes
+# Ofertas Alucinantes!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
 
+Powered by:
 <img src="https://angular.io/assets/images/logos/angular/angular.svg" data-canonical-src="https://angular.io/assets/images/logos/angular/angular.svg" width="200" height="200" />
+
+## Wireframes
+
+### Módulo ofertas
+
+Componente lista de ofertas:
+
+<img src="https://imgur.com/BLuPXAI" />
+
+Componente vista de la oferta:
+
+<img src="https://imgur.com/WKB4jDi" />
+
+Componente edición de la oferta:
+
+<img src="https://imgur.com/60chHnO" />
+
+Versión mobile:
+
+<img src="https://imgur.com/UuTBd9m" />
 
 ## Development server
 
