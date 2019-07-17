@@ -6,12 +6,15 @@
     transform: scale(1.1);
     z-index: 999;
   }
+
   h4 {
     font-size: 1.3em;
   }
+
   .card-header {
     background: $md-grey-100;
   }
+
   .card-img-wrapper {
     min-height: 320px;
     .card-img-top {
@@ -19,6 +22,7 @@
       max-width: 100%;
     }
   }
+
   .card-footer {
     padding: 0.5rem 1rem;
   }

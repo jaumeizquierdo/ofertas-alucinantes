@@ -5,6 +5,16 @@ import { PageEvent } from '@angular/material/paginator';
 import { Offer } from 'src/app/shared/classes/offer';
 import { promise } from 'protractor';
 
+import { Observable } from 'rxjs';
+import { interval } from 'rxjs';
+
+
+/* import { Observable } from 'rxjs';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/operator/startWith';
+import 'rxjs/add/operator/switchMap';
+ */
+
 @Component({
   selector: 'app-offer-list',
   templateUrl: './offer-list.component.html',
@@ -90,8 +100,17 @@ export class OfferListComponent implements OnInit {
     });
   }
 
+  //@Input() getOffers$: Observable<any>; -> No va (*)
+
   ngOnInit() {
+/*
     this.getOffers();
+    interval(500).subscribe(x => {
+      this.getOffers();
+    }); */
+
+    //this.getOffers$ = Observable.interval(1000).startWith(0).switchMap(() => this.getOffers()); -> No va (*)
+    this.getOffers(); // -> Sin intervalo de tiempo
   }
 
 }
