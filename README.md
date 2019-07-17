@@ -11,19 +11,19 @@ Powered by:
 
 Componente lista de ofertas:
 
-<img src="https://imgur.com/BLuPXAI" />
+<img src="https://imgur.com/BLuPXAI" data-canonical-src="https://imgur.com/BLuPXAI" />
 
 Componente vista de la oferta:
 
-<img src="https://imgur.com/WKB4jDi" />
+<img src="https://imgur.com/WKB4jDi" data-canonical-src="https://imgur.com/WKB4jDi" />
 
 Componente edición de la oferta:
 
-<img src="https://imgur.com/60chHnO" />
+<img src="https://imgur.com/60chHnO" data-canonical-src="https://imgur.com/60chHnO" />
 
 Versión mobile:
 
-<img src="https://imgur.com/UuTBd9m" />
+<img src="https://imgur.com/UuTBd9m" data-canonical-src="https://imgur.com/UuTBd9m" />
 
 ## Development server
 
