@@ -16,10 +16,10 @@ En el módulo user tenemos un CRUD en el cual podemos crear un nuevo usuario, li
 Los componentes utilizados son:
 
 <ul>
-  <li>LOGIN: formulario de login</li>
-  <li>REGISTER: formulario de registro</li>
-  <li>USER LIST: vista del listado de usuarios. Desde el card de cada una de las ofertas podemos emitir un voto positivo o negativo. También podemos editarla o eliminarla.</li>
-  <li>USER: vista del detalle de usuario</li>
+  <li>**LOGIN**: formulario de login</li>
+  <li>**REGISTER**: formulario de registro</li>
+  <li>**USER LIST**: vista del listado de usuarios. Desde el card de cada una de las ofertas podemos emitir un voto positivo o negativo. También podemos editarla o eliminarla.</li>
+  <li>**USER**: vista del detalle de usuario</li>
 </ul>
 
 ## Módulo Ofertas
@@ -27,23 +27,23 @@ Los componentes utilizados son:
 El módulo de ofertas tenemos otro CRUD que nos permite visualizar las ofertas enviadas por los usuarios.
 
 <ul>
-  <li>OFFER: vista principal de la app con el listado de ofertas. Tiene un paginado de 9 elementos por página.</li>
-  <li>OFFER ADD: formulario de envío de oferta. En la vista se puede obtener una vista previa de la oferta que estamos generando.</li>
-  <li>OFFER EDIT: formulario de edición de la oferta.</li>
+  <li>**OFFER**: vista principal de la app con el listado de ofertas. Tiene un paginado de 9 elementos por página.</li>
+  <li>**OFFER ADD**: formulario de envío de oferta. En la vista se puede obtener una vista previa de la oferta que estamos generando.</li>
+  <li>**OFFER EDIT**: formulario de edición de la oferta.</li>
 </ul>
 
 ## Mejoras introducidas
 
-- Angular Material (https://material.angular.io/)
-- Bootstrap 4 (https://getbootstrap.com/docs/4.0/getting-started/introduction/)
-- Material Icons (https://material.angular.io/)
-- Jquery (https://www.npmjs.com/package/jquery)
-- Paginado de ofertas (https://material.angular.io/components/paginator/overview)
-- NGX Spinner (https://napster2210.github.io/ngx-spinner/)
-- Material colors (https://www.npmjs.com/package/material-colors)
-- Moment.js (https://www.npmjs.com/package/moment)
-- ng2-truncate (https://www.npmjs.com/package/ng2-truncate)
-- ngx-pipes (https://www.npmjs.com/package/ngx-pipes)
+- **Angular Material** (https://material.angular.io/)
+- **Bootstrap 4** (https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+- **Material Icons** (https://material.angular.io/)
+- **Jquery** (https://www.npmjs.com/package/jquery)
+- **Paginado de ofertas** (https://material.angular.io/components/paginator/overview)
+- **NGX Spinner** (https://napster2210.github.io/ngx-spinner/)
+- **Material colors** (https://www.npmjs.com/package/material-colors)
+- **Moment.js** (https://www.npmjs.com/package/moment)
+- **ng2-truncate** (https://www.npmjs.com/package/ng2-truncate)
+- **ngx-pipes** (https://www.npmjs.com/package/ngx-pipes)
 
 ## Wireframes
 
