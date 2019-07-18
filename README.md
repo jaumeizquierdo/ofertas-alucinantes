@@ -10,6 +10,8 @@ Para ver una **demo funcional**	 puede verse en:
 - https://jaumeizquierdo.com/angular/ (Publicado en un servidor con Ubuntu y Apache)
 - http://ofertasalucinantes.com.mialias.net/ (Publicado en CDMON, usuario: oferta265 y clave: 8YGVmSpP , versión experimental)
 
+- https://slides.com/jaumeizquierdo/deck/#/
+
 La API que gestiona la información de ejemplo está disponible en:
 
 -  https://ofertas-rest.herokuapp.com/ (Publicado en heroku)
